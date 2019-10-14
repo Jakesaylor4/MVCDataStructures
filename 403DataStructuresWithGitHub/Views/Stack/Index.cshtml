@@ -12,7 +12,8 @@
     <title>Stack Index</title>
 </head>
 <body>
-    <div>
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Stack</h3>
         <ul>
             <li>
                 <a href="@Url.Action("AddOne","Stack")"
@@ -44,15 +45,18 @@
             </li>
         </ul>
     </div>
-    <p>@ViewBag.StackSearch</p>
-    <p>@ViewBag.StopWatch</p>
-    @if (ViewBag.MyStack != null)
+    <div style="margin-left:26%">
+        <p>@ViewBag.StackSearch</p>
+        <p>@ViewBag.StopWatch</p>
+        @if (ViewBag.MyStack != null)
     {
         foreach (var sData in ViewBag.MyStack)
         {
             <p>@sData</p>
-        }
     }
+}
+
+    </div>
 
 </body>
 </html>

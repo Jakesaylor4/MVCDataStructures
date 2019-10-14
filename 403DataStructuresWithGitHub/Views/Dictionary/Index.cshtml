@@ -12,7 +12,8 @@
     <title>Dictionary Index</title>
 </head>
 <body>
-    <div>
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Dictionary</h3>
         <ul>
             <li>
                 <a href="@Url.Action("AddOne","Dictionary")"
@@ -44,6 +45,7 @@
             </li>
         </ul>
     </div>
+    <div style="margin-left:26%">
     <p>@ViewBag.DictionarySearch</p>
     <p>@ViewBag.StopWatch</p>
     @if (ViewBag.MyDictionary != null)
@@ -53,6 +55,6 @@
             <p>@sData</p>
         }
     }
-
+    </div>
 </body>
 </html>

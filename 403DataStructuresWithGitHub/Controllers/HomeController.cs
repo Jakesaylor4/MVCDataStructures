@@ -16,7 +16,7 @@ namespace _403DataStructuresWithGitHub.Controllers
 
         public ActionResult Exit()
         {
-            return Redirect("http://www.espn.com");
+            return Redirect("https://www.byu.edu");
         }
 
     }

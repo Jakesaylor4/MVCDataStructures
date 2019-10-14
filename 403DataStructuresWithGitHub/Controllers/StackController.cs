@@ -64,7 +64,9 @@ namespace _403DataStructuresWithGitHub.Controllers
         public ActionResult Search()
         {
             stackSearch = "Not Found";
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
+            sw.Start();
             foreach (string item in myStack)
             {
                 if (item == "New Entry 1283")
@@ -72,6 +74,10 @@ namespace _403DataStructuresWithGitHub.Controllers
                     stackSearch = "Entry 1283 found.";
                 }
             }
+            sw.Stop();
+            TimeSpan ts = sw.Elapsed;
+
+            ViewBag.StopWatch = ts + " Elapsed";
             ViewBag.MyStack = null;
             ViewBag.StackSearch = stackSearch;
             return View("Index");

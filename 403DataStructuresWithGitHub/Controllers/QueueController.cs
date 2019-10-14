@@ -6,18 +6,12 @@ using System.Web.Mvc;
 
 namespace _403DataStructuresWithGitHub.Controllers
 {
-    public class HomeController : Controller
+    public class QueueController : Controller
     {
-        // GET: Home
+        // GET: Queue
         public ActionResult Index()
         {
             return View();
         }
-
-        public ActionResult Exit()
-        {
-            return Redirect("http://www.espn.com");
-        }
-
     }
 }
